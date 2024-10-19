@@ -1,0 +1,75 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_lawyer-zone">
+            <key name="lawyer_zone_theme_options">
+                <key name="lawyer-zone-display-site-logo"/>
+                <key name="lawyer-zone-display-site-title"/>
+                <key name="lawyer-zone-display-site-tagline"/>
+                <key name="lawyer-zone-header-height"/>
+                <key name="lawyer-zone-header-image-display"/>
+                <key name="lawyer-zone-enable-header-top"/>
+                <key name="lawyer-zone-header-top-menu-display-selection"/>
+                <key name="lawyer-zone-header-top-info-display-selection"/>
+                <key name="lawyer-zone-header-top-social-display-selection"/>
+                <key name="lawyer-zone-enable-transparent"/>
+                <key name="lawyer-zone-enable-sticky"/>
+                <key name="lawyer-zone-menu-right-button-options"/>
+                <key name="lawyer-zone-menu-right-button-title"/>
+                <key name="lawyer-zone-menu-right-button-link"/>
+                <key name="lawyer-zone-enable-cart-icon"/>
+                <key name="lawyer-zone-enable-feature"/>
+                <key name="lawyer-zone-slides-data"/>
+                <key name="lawyer-zone-feature-slider-enable-animation"/>
+                <key name="lawyer-zone-feature-slider-display-title"/>
+                <key name="lawyer-zone-feature-slider-display-excerpt"/>
+                <key name="lawyer-zone-fs-image-display-options"/>
+                <key name="lawyer-zone-feature-slider-text-align"/>
+                <key name="lawyer-zone-feature-info-number"/>
+                <key name="lawyer-zone-first-info-icon"/>
+                <key name="lawyer-zone-first-info-title"/>
+                <key name="lawyer-zone-first-info-desc"/>
+                <key name="lawyer-zone-second-info-icon"/>
+                <key name="lawyer-zone-second-info-title"/>
+                <key name="lawyer-zone-second-info-desc"/>
+                <key name="lawyer-zone-third-info-icon"/>
+                <key name="lawyer-zone-third-info-title"/>
+                <key name="lawyer-zone-third-info-desc"/>
+                <key name="lawyer-zone-forth-info-icon"/>
+                <key name="lawyer-zone-forth-info-title"/>
+                <key name="lawyer-zone-forth-info-desc"/>
+                <key name="lawyer-zone-footer-copyright"/>
+                <key name="lawyer-zone-footer-copyright-beside-option"/>
+                <key name="lawyer-zone-footer-bg-img"/>
+                <key name="lawyer-zone-pagination-option"/>
+                <key name="lawyer-zone-enable-animation"/>
+                <key name="lawyer-zone-single-sidebar-layout"/>
+                <key name="lawyer-zone-front-page-sidebar-layout"/>
+                <key name="lawyer-zone-archive-sidebar-layout"/>
+                <key name="lawyer-zone-blog-archive-img-size"/>
+                <key name="lawyer-zone-blog-archive-content-from"/>
+                <key name="lawyer-zone-blog-archive-excerpt-length"/>
+                <key name="lawyer-zone-blog-archive-more-text"/>
+                <key name="lawyer-zone-primary-color"/>
+                <key name="lawyer-zone-header-top-bg-color"/>
+                <key name="lawyer-zone-footer-bg-color"/>
+                <key name="lawyer-zone-footer-bottom-bg-color"/>
+                <key name="lawyer-zone-link-color"/>
+                <key name="lawyer-zone-link-hover-color"/>
+                <key name="lawyer-zone-hide-front-page-content"/>
+                <key name="lawyer-zone-hide-front-page-header"/>
+                <key name="lawyer-zone-single-header-title"/>
+                <key name="lawyer-zone-single-img-size"/>
+                <key name="lawyer-zone-popup-widget-title"/>
+                <key name="lawyer-zone-show-breadcrumb"/>
+                <key name="lawyer-zone-search-placeholder"/>
+                <key name="lawyer-zone-social-data"/>
+            </key>
+        </key>
+    </admin-texts>
+</wpml-config>
+
+
+
+
+
+
