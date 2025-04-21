@@ -2,18 +2,19 @@
 if ( ! function_exists( 'lawyer_zone_excerpt_length' ) ) :
 	/**
 	 * Excerpt length
+	 *
 	 * @since Lawyer Zone 1.0.0
 	 *
 	 * @param int $length number of words
 	 * @return int
 	 */
 	function lawyer_zone_excerpt_length( $length ) {
-		if( is_admin() ){
+		if ( is_admin() ) {
 			return $length;
 		}
 
-		global $lawyer_zone_customizer_all_values;
-		$excerpt_length = absint( $lawyer_zone_customizer_all_values['lawyer-zone-blog-archive-excerpt-length'] );
+		$lawyer_zone_customizer_all_values = lawyer_zone_get_theme_options();
+		$excerpt_length                    = absint( $lawyer_zone_customizer_all_values['lawyer-zone-blog-archive-excerpt-length'] );
 		if ( empty( $excerpt_length ) ) {
 			$excerpt_length = $length;
 		}
@@ -33,14 +34,13 @@ if ( ! function_exists( 'lawyer_zone_content_more_link' ) ) :
 	 */
 	function lawyer_zone_content_more_link( $more_link, $more_original_text ) {
 
-		global $lawyer_zone_customizer_all_values;
-		$more_text = esc_html( $lawyer_zone_customizer_all_values['lawyer-zone-blog-archive-more-text'] );
+		$lawyer_zone_customizer_all_values = lawyer_zone_get_theme_options();
+		$more_text                         = esc_html( $lawyer_zone_customizer_all_values['lawyer-zone-blog-archive-more-text'] );
 		if ( ! empty( $more_text ) ) {
 			$more_link = str_replace( $more_original_text, esc_html( $more_text ), $more_link );
 			$more_link = str_replace( 'more-link', 'more-link btn btn-primary', $more_link );
 		}
 		return $more_link;
-
 	}
 endif;
 
@@ -55,12 +55,12 @@ if ( ! function_exists( 'lawyer_zone_excerpt_read_more' ) ) :
 	 */
 	function lawyer_zone_excerpt_read_more( $more ) {
 
-		$output = $more;
-		global $lawyer_zone_customizer_all_values;
-		$more_text = esc_html( $lawyer_zone_customizer_all_values['lawyer-zone-blog-archive-more-text'] );
+		$output                            = $more;
+		$lawyer_zone_customizer_all_values = lawyer_zone_get_theme_options();
+		$more_text                         = esc_html( $lawyer_zone_customizer_all_values['lawyer-zone-blog-archive-more-text'] );
 		if ( ! empty( $more_text ) ) {
-			$output = ' <br /><a href="'. esc_url( get_permalink() ) . '" class="more-link btn btn-primary">' . esc_html( $more_text ) . '</a>';
-			$output = apply_filters( 'lawyer_zone_filter_read_more_link' , $output );
+			$output = ' <br /><a href="' . esc_url( get_permalink() ) . '" class="more-link btn btn-primary">' . esc_html( $more_text ) . '</a>';
+			$output = apply_filters( 'lawyer_zone_filter_read_more_link', $output );
 		}
 		return $output;
 	}

@@ -8,7 +8,7 @@
  * @subpackage Lawyer Zone
  */
 get_header();
-global $lawyer_zone_customizer_all_values;
+$lawyer_zone_customizer_all_values = lawyer_zone_get_theme_options();
 ?>
 <div class="wrapper inner-main-title">
 	<?php
@@ -18,7 +18,7 @@ global $lawyer_zone_customizer_all_values;
 		<header class="entry-header init-animate">
 			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'lawyer-zone' ); ?></h1>
 			<?php
-			if( 1 == $lawyer_zone_customizer_all_values['lawyer-zone-show-breadcrumb'] ){
+			if ( 1 == $lawyer_zone_customizer_all_values['lawyer-zone-show-breadcrumb'] ) {
 				lawyer_zone_breadcrumbs();
 			}
 			?>
@@ -32,12 +32,12 @@ global $lawyer_zone_customizer_all_values;
 				<div class="page-content">
 					<div class="row">
 						<div class="col-md-5 col-sm-5">
-							<h1><?php esc_html_e('404','lawyer-zone'); ?></h1>
+							<h1><?php esc_html_e( '404', 'lawyer-zone' ); ?></h1>
 						</div>
 						<div class="col-md-7 col-sm-7">
 							<div class="error-content">
 								<h3>
-									<?php esc_html_e('Sorry! We could not found that page','lawyer-zone'); ?>
+									<?php esc_html_e( 'Sorry! We could not found that page', 'lawyer-zone' ); ?>
 									
 								</h3>
 								<p>
@@ -52,4 +52,5 @@ global $lawyer_zone_customizer_all_values;
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- #content -->
-<?php get_footer();
+<?php
+get_footer();

@@ -8,7 +8,7 @@
  * @subpackage Lawyer Zone
  */
 get_header();
-global $lawyer_zone_customizer_all_values;
+$lawyer_zone_customizer_all_values = lawyer_zone_get_theme_options();
 ?>
 <div class="wrapper inner-main-title">
 	<?php
@@ -18,7 +18,7 @@ global $lawyer_zone_customizer_all_values;
 		<header class="entry-header init-animate">
 			<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'lawyer-zone' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			<?php
-			if( 1 == $lawyer_zone_customizer_all_values['lawyer-zone-show-breadcrumb'] ){
+			if ( 1 == $lawyer_zone_customizer_all_values['lawyer-zone-show-breadcrumb'] ) {
 				lawyer_zone_breadcrumbs();
 			}
 			?>
@@ -28,7 +28,7 @@ global $lawyer_zone_customizer_all_values;
 <div id="content" class="site-content container clearfix">
 	<?php
 	$sidebar_layout = lawyer_zone_sidebar_selection();
-	if( 'both-sidebar' == $sidebar_layout ) {
+	if ( 'both-sidebar' == $sidebar_layout ) {
 		echo '<div id="primary-wrap" class="clearfix">';
 	}
 	?>
@@ -38,7 +38,8 @@ global $lawyer_zone_customizer_all_values;
 		if ( have_posts() ) :
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/**
 				 * Run the loop for the search to output the results.
@@ -51,6 +52,7 @@ global $lawyer_zone_customizer_all_values;
 
 			/**
 			 * lawyer_zone_action_posts_navigation hook
+			 *
 			 * @since Lawyer Zone 1.0.0
 			 *
 			 * @hooked lawyer_zone_posts_navigation - 10
@@ -61,16 +63,18 @@ global $lawyer_zone_customizer_all_values;
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 	<?php
 	get_sidebar( 'left' );
 	get_sidebar();
-	if( 'both-sidebar' == $sidebar_layout ) {
+	if ( 'both-sidebar' == $sidebar_layout ) {
 		echo '</div>';
 	}
 	?>
 </div><!-- #content -->
-<?php get_footer();
+<?php
+get_footer();
