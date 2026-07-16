@@ -21,7 +21,7 @@
 		$no_blog_image = 'no-image';
 	endif;
 	?>
-    <div class="entry-content <?php echo $no_blog_image?>">
+    <div class="entry-content <?php echo esc_attr( $no_blog_image ); ?>">
 		<div class="entry-content">
 			<?php
 			the_content();

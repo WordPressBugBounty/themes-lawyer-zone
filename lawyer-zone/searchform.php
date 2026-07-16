@@ -17,7 +17,7 @@ $lawyer_zone_customizer_all_values = lawyer_zone_get_theme_options();
 				$placeholder_text = ' placeholder="' . esc_attr( $lawyer_zone_customizer_all_values['lawyer-zone-search-placeholder'] ) . '" ';
 			endif;
 			?>
-			<input type="text" <?php echo $placeholder_text; ?> class="menu-search" id="menu-search" name="s" value="<?php echo get_search_query(); ?>" />
+			<input type="text" <?php echo esc_attr( $placeholder_text ); ?> class="menu-search" id="menu-search" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" />
 			<button class="searchsubmit fa fa-search" type="submit" id="searchsubmit"></button>
 		</div>
 	</form>

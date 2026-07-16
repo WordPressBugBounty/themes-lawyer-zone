@@ -1,5 +1,9 @@
 == Change log ==
 
+= 4.0.0 - Jul 16 2026 =
+* Updated: WordPress 7.0 compatibility
+* Updated: Requires PHP 7.4
+
 = 3.0.6 - Apr 21 2025 =
 * Added: Tested with the latest WordPress.
 * Added: Static caching mechanism for theme options to improve performance.

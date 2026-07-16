@@ -69,8 +69,8 @@ if ( ! class_exists( 'Lawyer_Zone_Posts_Col' ) ) {
 
 	        ?>
             <p>
-                <label for="<?php echo $this->get_field_id( 'unique_id' ); ?>"><?php _e( 'Section ID', 'lawyer-zone' ); ?>:</label>
-                <input class="widefat" id="<?php echo $this->get_field_id( 'unique_id' ); ?>" name="<?php echo $this->get_field_name( 'unique_id' ); ?>" type="text" value="<?php echo $unique_id; ?>" />
+                <label for="<?php echo esc_attr( $this->get_field_id( 'unique_id' ) ); ?>"><?php _e( 'Section ID', 'lawyer-zone' ); ?>:</label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'unique_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'unique_id' ) ); ?>" type="text" value="<?php echo $unique_id; ?>" />
                 <br />
                 <small><?php _e('Enter a Unique Section ID. You can use this ID in Menu item for enabling One Page Menu.','lawyer-zone')?></small>
             </p>
@@ -146,8 +146,8 @@ if ( ! class_exists( 'Lawyer_Zone_Posts_Col' ) ) {
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_number' ) ); ?>" type="number" value="<?php echo $post_number; ?>" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'content_from' ); ?>"><?php _e( 'Content From', 'lawyer-zone' ); ?>:</label>
-                <select class="widefat" id="<?php echo $this->get_field_id( 'content_from' ); ?>" name="<?php echo $this->get_field_name( 'content_from' ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'content_from' ) ); ?>"><?php _e( 'Content From', 'lawyer-zone' ); ?>:</label>
+                <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'content_from' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content_from' ) ); ?>">
 			        <?php
 			        $lawyer_zone_about_content_from = lawyer_zone_content_from();
 			        foreach ( $lawyer_zone_about_content_from as $key => $value ) {
@@ -240,7 +240,7 @@ if ( ! class_exists( 'Lawyer_Zone_Posts_Col' ) ) {
 			        <?php
 			        $lawyer_zone_image_sizes = lawyer_zone_get_image_sizes_options();
 			        foreach( $lawyer_zone_image_sizes as $key => $lawyer_zone_column_array ){
-				        echo ' <option value="'.esc_attr( $key ).'" '.selected( $lawyer_zone_img_size, $key, 0). '>'.esc_html( $lawyer_zone_column_array ).'</option>';
+				        echo ' <option value="'.esc_attr( $key ).'" '.selected( esc_attr( $lawyer_zone_img_size ), $key, 0). '>'.esc_html( $lawyer_zone_column_array ).'</option>';
 			        }
 			        ?>
                 </select>
@@ -420,7 +420,7 @@ if ( ! class_exists( 'Lawyer_Zone_Posts_Col' ) ) {
                             $div_attr = 'class="featured-entries-col acme-slick-carausel" data-column="'.absint( $column_number ).'"';
                         }
                         ?>
-                        <div <?php echo $div_attr;?>>
+                        <div <?php echo esc_attr( $div_attr ); ?>>
                             <?php
                             $lawyer_zone_featured_index = 1;
                             while ( $lawyer_zone_featured_query->have_posts() ) :$lawyer_zone_featured_query->the_post();
@@ -460,7 +460,7 @@ if ( ! class_exists( 'Lawyer_Zone_Posts_Col' ) ) {
                                                         the_post_thumbnail( $thumb );
                                                         echo '</a>';
                                                         ?>
-                                                        <header class="entry-header <?php echo $no_blog_image; ?>">
+                                                        <header class="entry-header <?php echo esc_attr( $no_blog_image ); ?>">
                                                             <div class="entry-meta">
                                                                 <a href="<?php the_permalink(); ?>">
                                                                         <span class="day-month">
@@ -485,7 +485,7 @@ if ( ! class_exists( 'Lawyer_Zone_Posts_Col' ) ) {
                                                 } 
                                                 ?>
                                             </div>
-                                            <div class="entry-content <?php echo $no_blog_image?>">
+                                            <div class="entry-content <?php echo esc_attr( $no_blog_image ); ?>">
                                                 <div class="entry-header-title">
                                                     <header class="entry-header">
                                                         <div class="entry-meta">

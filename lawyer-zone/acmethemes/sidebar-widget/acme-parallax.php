@@ -53,21 +53,21 @@ if ( ! class_exists( 'Lawyer_Zone_Feature' ) ) {
 			$button_two_url     = esc_url( $instance[ 'button_two_url' ] );
 			?>
 			<p>
-				<label for="<?php echo $this->get_field_id( 'unique_id' ); ?>"><?php esc_html_e( 'Section ID', 'lawyer-zone' ); ?></label>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'unique_id' ); ?>" name="<?php echo $this->get_field_name( 'unique_id' ); ?>" type="text" value="<?php echo $unique_id; ?>" />
+				<label for="<?php echo esc_attr( $this->get_field_id( 'unique_id' ) ); ?>"><?php esc_html_e( 'Section ID', 'lawyer-zone' ); ?></label>
+				<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'unique_id' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'unique_id' ) ); ?>" type="text" value="<?php echo $unique_id; ?>" />
 				<br />
 				<small><?php esc_html_e('Enter a Unique Section ID. You can use this ID in Menu item for enabling One Page Menu.','lawyer-zone')?></small>
 			</p>
 			<p>
-				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title', 'lawyer-zone' ); ?></label>
-				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'lawyer-zone' ); ?></label>
+				<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
 			</p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'sub_title' ); ?>"><?php _e( 'Short Description', 'lawyer-zone' ); ?>:</label>
-                <textarea class="widefat" rows="5" cols="15" id="<?php echo $this->get_field_id( 'sub_title' ); ?>" name="<?php echo $this->get_field_name( 'sub_title' ); ?>"><?php echo $sub_title; ?></textarea>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'sub_title' ) ); ?>"><?php _e( 'Short Description', 'lawyer-zone' ); ?>:</label>
+                <textarea class="widefat" rows="5" cols="15" id="<?php echo esc_attr( $this->get_field_id( 'sub_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'sub_title' ) ); ?>"><?php echo $sub_title; ?></textarea>
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id('bg_image'); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'bg_image' ) ); ?>">
 					<?php esc_html_e( 'Select Background Image', 'lawyer-zone' ); ?>
                 </label>
 				<?php
@@ -79,25 +79,25 @@ if ( ! class_exists( 'Lawyer_Zone_Feature' ) ) {
                 <span class="img-preview-wrap" <?php echo  $lawyer_zone_display_none ; ?>>
                     <img class="widefat" src="<?php echo esc_url( $bg_image ); ?>" alt="<?php esc_attr_e( 'Image preview', 'lawyer-zone' ); ?>"  />
                 </span><!-- .img-preview-wrap -->
-                <input type="text" class="widefat" name="<?php echo $this->get_field_name('bg_image'); ?>" id="<?php echo $this->get_field_id('bg_image'); ?>" value="<?php echo esc_url( $bg_image ); ?>" />
+                <input type="text" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'bg_image' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'bg_image' ) ); ?>" value="<?php echo esc_url( $bg_image ); ?>" />
                 <input type="button" value="<?php esc_attr_e( 'Upload Image', 'lawyer-zone' ); ?>" class="button media-image-upload" data-title="<?php esc_attr_e( 'Select Background Image','lawyer-zone'); ?>" data-button="<?php esc_attr_e( 'Select Background Image','lawyer-zone'); ?>"/>
                 <input type="button" value="<?php esc_attr_e( 'Remove Image', 'lawyer-zone' ); ?>" class="button media-image-remove" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'button_one_text' ); ?>"><?php esc_html_e( 'Extra Button Text', 'lawyer-zone' ); ?></label>
-                <input class="widefat" id="<?php echo $this->get_field_id( 'button_one_text' ); ?>" name="<?php echo $this->get_field_name( 'button_one_text' ); ?>" type="text" value="<?php echo $button_one_text; ?>" />
+                <label for="<?php echo esc_attr( $this->get_field_id( 'button_one_text' ) ); ?>"><?php esc_html_e( 'Extra Button Text', 'lawyer-zone' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'button_one_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_one_text' ) ); ?>" type="text" value="<?php echo $button_one_text; ?>" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'button_one_url' ); ?>"><?php esc_html_e( 'Button Link Url', 'lawyer-zone' ); ?></label>
-                <input class="widefat" id="<?php echo $this->get_field_id( 'button_one_url' ); ?>" name="<?php echo $this->get_field_name( 'button_one_url' ); ?>" type="text" value="<?php echo $button_one_url; ?>" />
+                <label for="<?php echo esc_attr( $this->get_field_id( 'button_one_url' ) ); ?>"><?php esc_html_e( 'Button Link Url', 'lawyer-zone' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'button_one_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_one_url' ) ); ?>" type="text" value="<?php echo $button_one_url; ?>" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'button_two_text' ); ?>"><?php esc_html_e( 'Extra Button Text', 'lawyer-zone' ); ?></label>
-                <input class="widefat" id="<?php echo $this->get_field_id( 'button_two_text' ); ?>" name="<?php echo $this->get_field_name( 'button_two_text' ); ?>" type="text" value="<?php echo $button_two_text; ?>" />
+                <label for="<?php echo esc_attr( $this->get_field_id( 'button_two_text' ) ); ?>"><?php esc_html_e( 'Extra Button Text', 'lawyer-zone' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'button_two_text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_two_text' ) ); ?>" type="text" value="<?php echo $button_two_text; ?>" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'button_two_url' ); ?>"><?php esc_html_e( 'Button Link Url', 'lawyer-zone' ); ?></label>
-                <input class="widefat" id="<?php echo $this->get_field_id( 'button_two_url' ); ?>" name="<?php echo $this->get_field_name( 'button_two_url' ); ?>" type="text" value="<?php echo $button_two_url; ?>" />
+                <label for="<?php echo esc_attr( $this->get_field_id( 'button_two_url' ) ); ?>"><?php esc_html_e( 'Button Link Url', 'lawyer-zone' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'button_two_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_two_url' ) ); ?>" type="text" value="<?php echo $button_two_url; ?>" />
             </p>
 			<?php
 		}
@@ -165,7 +165,7 @@ if ( ! class_exists( 'Lawyer_Zone_Feature' ) ) {
 
 			$animation = "init-animate zoomIn";
 			?>
-			<section id="<?php echo $unique_id;?>" class="at-widgets primary-bg <?php echo $bg_image_class; ?> " style="<?php echo $bg_image_style; ?>">
+			<section id="<?php echo esc_attr( $unique_id ); ?>" class="at-widgets primary-bg <?php echo $bg_image_class; ?> " style="<?php echo esc_attr( $bg_image_style ); ?>">
 				<div class="container">
 					<?php
                     if( ! empty( $title ) || !empty( $sub_title ) ){
@@ -182,20 +182,20 @@ if ( ! class_exists( 'Lawyer_Zone_Feature' ) ) {
 					?>
 					<div class="row">
                      
-						<div class="col-md-12 at-btn-wrap <?php echo $animation;?>">
+						<div class="col-md-12 at-btn-wrap <?php echo esc_attr( $animation ); ?>">
                             <?php
                             if( !empty( $button_one_text ) ){
                                 ?>
-                                <a href="<?php echo $button_one_url; ?>" class="<?php echo $animation;?> btn btn-primary btn-reverse outline-outward banner-btn">
-                                    <?php echo $button_one_text;?>
+                                <a href="<?php echo esc_url( $button_one_url ); ?>" class="<?php echo esc_attr( $animation ); ?> btn btn-primary btn-reverse outline-outward banner-btn">
+                                    <?php echo esc_html( $button_one_text ); ?>
                                     <i class="fa fa-angle-double-right"></i>
                                 </a>
                                 <?php
                             }
                             if( !empty( $button_two_text ) ){
                                 ?>
-                                <a href="<?php echo $button_two_url; ?>" class="<?php echo $animation;?> btn btn-primary btn-reverse outline-outward banner-btn">
-	                                <?php echo $button_two_text;?>
+                                <a href="<?php echo esc_url( $button_two_url ); ?>" class="<?php echo esc_attr( $animation ); ?> btn btn-primary btn-reverse outline-outward banner-btn">
+	                                <?php echo esc_html( $button_two_text ); ?>
                                     <i class="fa fa-angle-double-right"></i>
                                 </a>
                                 <?php

@@ -59,7 +59,7 @@ if ( ! function_exists( 'lawyer_zone_feature_info' ) ) :
 				break;
 			}
 			?>
-			<div class="info-icon-box <?php echo $col; ?>">
+			<div class="info-icon-box <?php echo esc_attr( $col ); ?>">
 				<?php
 				if ( ! empty( $base_basic_info_data['icon'] ) ) {
 					?>

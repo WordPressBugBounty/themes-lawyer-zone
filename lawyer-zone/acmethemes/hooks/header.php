@@ -199,7 +199,7 @@ if ( ! function_exists( 'lawyer_zone_header' ) ) :
 			<?php
 		}
 		?>
-		<div class="navbar at-navbar <?php echo $lawyer_zone_nav_class; ?>" id="navbar" role="navigation">
+		<div class="navbar at-navbar <?php echo esc_attr( $lawyer_zone_nav_class ); ?>" id="navbar" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>

@@ -31,11 +31,11 @@ $no_blog_image                     = '';
 			$no_blog_image = 'no-image';
 		endif;
 		?>
-		<div class="entry-content <?php echo $no_blog_image; ?>">
+		<div class="entry-content <?php echo esc_attr( $no_blog_image ); ?>">
 			<?php
 			if ( 'post' === get_post_type() && has_category() ) :
 				?>
-			<header class="entry-header <?php echo $no_blog_image; ?>">
+			<header class="entry-header <?php echo esc_attr( $no_blog_image ); ?>">
 				<div class="entry-meta">
 					<?php
 					lawyer_zone_cats_lists()

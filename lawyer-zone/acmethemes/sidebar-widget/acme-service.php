@@ -163,8 +163,8 @@ if ( ! class_exists( 'Lawyer_Zone_Service' ) ) {
             <!--updated code-->
 
             <p>
-                <label for="<?php echo $this->get_field_id( 'content_from' ); ?>"><?php _e( 'Content From', 'lawyer-zone' ); ?>:</label>
-                <select class="widefat" id="<?php echo $this->get_field_id( 'content_from' ); ?>" name="<?php echo $this->get_field_name( 'content_from' ); ?>">
+                <label for="<?php echo esc_attr( $this->get_field_id( 'content_from' ) ); ?>"><?php _e( 'Content From', 'lawyer-zone' ); ?>:</label>
+                <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'content_from' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content_from' ) ); ?>">
 					<?php
 					$lawyer_zone_service_content_from = lawyer_zone_content_from();
 					foreach ( $lawyer_zone_service_content_from as $key => $value ) {
@@ -176,12 +176,12 @@ if ( ! class_exists( 'Lawyer_Zone_Service' ) ) {
                 </select>
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id( 'content_number' ); ?>"><?php _e( 'Number of words in content', 'lawyer-zone' ); ?>:</label>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'content_number' ) ); ?>"><?php _e( 'Number of words in content', 'lawyer-zone' ); ?>:</label>
                 <br/>
                 <small>
 					<?php esc_html_e('Please enter -1 to show full content or 0 to show none','lawyer-zone'); ?>
                 </small>
-                <input class="widefat" id="<?php echo $this->get_field_id( 'content_number' ); ?>" name="<?php echo $this->get_field_name( 'content_number' ); ?>" type="number" value="<?php echo $content_number; ?>" />
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'content_number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content_number' ) ); ?>" type="number" value="<?php echo $content_number; ?>" />
             </p>
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'column_number' ) ); ?>"><?php esc_html_e( 'Column Number', 'lawyer-zone' ); ?></label>
@@ -321,7 +321,7 @@ if ( ! class_exists( 'Lawyer_Zone_Service' ) ) {
 						echo "</div>";
 					}
 					?>
-                    <div <?php echo $div_attr;?>>
+                    <div <?php echo esc_attr( $div_attr ); ?>>
 						<?php
 						$post_in = array();
 						if  ( !empty( $at_all_page_items) && is_array($at_all_page_items) && count($at_all_page_items) > 0 ){
